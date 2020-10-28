@@ -20,7 +20,7 @@ public class SomeApplication {
 
     @RequestMapping("/getsome")
     public String getSome() {
-
+        //test测试
         return message;
     }
 
