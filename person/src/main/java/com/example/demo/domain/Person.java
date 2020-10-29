@@ -1,14 +1,15 @@
 package com.example.demo.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import lombok.Data;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by andy on 2017/9/26.
  */
 @Entity
+@Data
 public class Person implements Serializable {
 
     @Id
@@ -21,39 +22,4 @@ public class Person implements Serializable {
     @Column(name = "age")
     private Integer age;
 
-    public Person() {
-
-        super();
-    }
-
-    public Person(Integer id, String name, Integer age) {
-        super();
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 }
