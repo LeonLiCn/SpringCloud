@@ -5,6 +5,8 @@ import com.example.demo.domain.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * Created by andy on 2017/10/16.
  */
@@ -24,6 +26,11 @@ public class PersonController {
         person = dao.save(person);
 
         return person.getId().toString();
+    }
+
+    @GetMapping(value = "/list")
+    public List<Person> get() {
+        return dao.findAll();
     }
 
 
