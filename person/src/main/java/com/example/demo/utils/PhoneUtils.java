@@ -4,9 +4,9 @@ import org.apache.commons.lang.StringUtils;
 
 public class PhoneUtils {
 
-    private static final String OVERLAY = "****";
-    private static final int START = 3;
-    private static final int END = 7;
+    private static final String OVERLAY = "********";
+    private static final int START = 4;
+    private static final int END = 12;
 
     /**
      * 手机号格式校验正则
